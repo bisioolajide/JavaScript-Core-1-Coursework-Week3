@@ -5,8 +5,18 @@
 
   HINT: string and array methods that could be helpful (indexOf, filter)
 */
+// var pairsByIndexRaw = [[0, 3], [1, 2], [2, 1], null, [1], false, "whoops"];
+// // var indexes = students + mentors
+// var pairsByIndex = pairsByIndexRaw.filter(checkPair);
 
-function getLanes() {}
+function getLanes() {
+  var searchWord = 'Lane';
+  var word = searchWord.toLowerCase();
+  var lane = streetNames.filter((streetname) => streetname.toLowerCase().indexOf(word) > -1)
+  console.log(lane)
+  return lane
+}
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

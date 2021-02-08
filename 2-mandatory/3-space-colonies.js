@@ -14,9 +14,27 @@
         Logic: Only strings that start with A, and finish with family
   
 */
+// function safeLevels(array) {
+// let newOxygenLevels = [];
+// for (let i = 0; i < array.length; i++) {
+//   newOxygenLevels.push(array[i].replace("%", ""))
+// }
+// for (let i = 0; i < newOxygenLevels.length; i++) {
+//   if (newOxygenLevels[i] > 19.5 && newOxygenLevels[i] < 23.5) {
+//     return newOxygenLevels[i] + "%"
+//   }
 
-function colonisers() {}
+// write a function to create an array / if families last name starts with A, should stay, otherwise to go find another planet(BO)
 
+function colonisers(voyagers) {
+  let newVoyagers = [];
+  for (let i = 0; i < voyagers.length; i++) {
+    if (voyagers[i].startsWith("A") && voyagers[i].includes("family")) {
+      newVoyagers.push(voyagers[i])
+    }
+  }
+  return newVoyagers
+}
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const voyagers = [
@@ -34,6 +52,7 @@ const voyagers = [
   "Archer family",
 ];
 
+const { statSync } = require("fs")
 const util = require("util");
 
 function test(test_name, actual, expected) {

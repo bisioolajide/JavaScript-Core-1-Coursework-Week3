@@ -5,11 +5,14 @@
   - Finish the statement on line 11 to produce an array with valid content
   - Do not edit any of the existing code
 */
-
+// check  with .filter that array pairs and not null - also practise use of Array.isArray(BO) 
 var pairsByIndexRaw = [[0, 3], [1, 2], [2, 1], null, [1], false, "whoops"];
+// var indexes = students + mentors
+var pairsByIndex = pairsByIndexRaw.filter(checkPair); // Complete this statement
 
-var pairsByIndex; // Complete this statement
-
+function checkPair(element) {
+  return Array.isArray(element) && element.length === 2;
+}
 var students = ["Islam", "Lesley", "Harun", "Rukmini"];
 var mentors = ["Daniel", "Irina", "Mozafar", "Luke"];
 

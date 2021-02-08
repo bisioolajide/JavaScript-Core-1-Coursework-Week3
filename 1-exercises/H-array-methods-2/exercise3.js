@@ -7,9 +7,13 @@
 var ukNations = ["Scotland", "Wales", "England", "Northern Ireland"];
 
 function isInUK(country) {
-  return; // complete this statement
+  return ukNations.includes(country); // complete this statement
 }
+// var mentors = ["Daniel", "Irini", "Ashleigh", "Rob", "Etzali"];
 
+// function isAMentor(name) {
+//   return mentors.includes(name);
+// }
 /* 
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */

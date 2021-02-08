@@ -6,8 +6,8 @@
 
 var mentors = ["Daniel", "Irina", "Rares"];
 var students = ["Rukmini", "Abdul", "Austine", "Swathi"];
-
-var everyone; // complete this statement
+// combining 2 different arrays using concat (BO)
+var everyone = mentors.concat(students); // complete this statement 
 
 /* 
   DO NOT EDIT BELOW THIS LINE

@@ -16,10 +16,14 @@ var names = [
   "Karim",
   "Ahmed",
 ];
-
+// find first characters in array over a specific length (BO)***
+function findLongNameThatStartsWithA(name) {
+  return name.length > 7 && name[0] === "A";
+}
 var longNameThatStartsWithA = findLongNameThatStartsWithA(names);
+var longNameThatStartsWithA = names.find(findLongNameThatStartsWithA)
+console.log(longNameThatStartsWithA); 
 
-console.log(longNameThatStartsWithA);
 
 /* EXPECTED OUTPUT */
 // "Alexandra"

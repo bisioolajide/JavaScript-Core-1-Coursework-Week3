@@ -25,6 +25,26 @@ PasswordValidationResult=  [false, false, false, false, true]
 */
 
 function validatePasswords(passwords) {
+    const validate = passwords.filter((password) => password.length >= 5)
+    if (validate) {
+        var arrayLength = passwords.length
+        for (var i = 0; i < arrayLength - 1; i++) {
+            var string = validate[i]
+            //console.log(string)
+            var up = containsUppercaseLetter(string)
+            var low = containsLowercaseLetter(string)
+            var containNumber = containsNumber(string)
+            var containSymbol = containsSymbol(string)
+            if (!up || !low || !containNumber || !containSymbol) {
+                //console.log("error")
+            } else {
+                let array = []
+                array.push(string)
+                console.log(array)
+            }
+
+        }
+    }
 }
 
 // Returns true if string contains at least one uppercase letter.
@@ -46,6 +66,9 @@ function containsNumber(string) {
 function containsSymbol(string) {
     return /[!#$%.*&]/.test(string);
 }
+
+
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

@@ -4,7 +4,8 @@
 */
 
 var numbers = [3, 2, 1];
-var sortedNumbers; // complete this statement
+// using .sort to sort an array in order (BO)
+var sortedNumbers = numbers.sort(); // complete this statement
 
 /* 
   DO NOT EDIT BELOW THIS LINE

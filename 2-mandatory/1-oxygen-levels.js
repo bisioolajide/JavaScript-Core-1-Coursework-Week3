@@ -11,7 +11,19 @@
     Some string methods that might help you here are .replace() and .substring(). 
 */
 
-function safeLevels() {}
+function safeLevels (array) {
+  let newOxygenLevels = [];
+   for (let i = 0; i < array.length; i++){
+    newOxygenLevels.push(array[i].replace("%", "")) 
+  }
+  for (let i = 0; i < newOxygenLevels.length; i++) {
+    if (newOxygenLevels[i] > 19.5 && newOxygenLevels[i] <23.5){
+      return newOxygenLevels[i] +"%"
+   }
+  }
+} 
+ 
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

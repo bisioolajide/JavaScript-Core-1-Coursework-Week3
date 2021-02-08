@@ -21,7 +21,18 @@
   Let's first look at an example that will teach you how to use these methods.
 */
 
-function bushChecker() {}
+// check if bush has all pink berries / if yes, return "Bush is safe to eat from" / if not safe return "Toxic! Leave bush alone!"
+
+function bushChecker(array) {
+  if (array.every(lm => lm === "pink")){
+    return "Bush is safe to eat from";
+  } else {
+    return "Toxic! Leave bush alone!";
+  }
+ 
+}
+
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
