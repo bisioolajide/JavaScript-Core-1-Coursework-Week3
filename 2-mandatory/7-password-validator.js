@@ -24,25 +24,43 @@ PasswordValidationResult=  [false, false, false, false, true]
 
 */
  
-Two options of using .map to shorten function (BO)
-// function validatePasswords(passwords) {
-//     const validate = passwords.map((element, index, array) => element.length >= 5
-//         && containsUppercaseLetter(element)
-//         && containsLowercaseLetter(element)
-//         && containsNumber(element)
-//         && containsSymbol(element)
-//         && array.indexOf(element) === index ? true : false)
-//     return validate
-// }
-
-
-const validatePasswords = (passwords) => passwords.map((element,index,array) => element.length >= 5 
-        && containsUppercaseLetter(element) 
-        && containsLowercaseLetter(element) 
-        && containsNumber(element) 
+// Two options of using .map to shorten function (BO)
+function validatePasswords(passwords) {
+    const validate = passwords.map((element, index, array) => element.length >= 5
+        && containsUppercaseLetter(element)
+        && containsLowercaseLetter(element)
+        && containsNumber(element)
         && containsSymbol(element)
         && array.indexOf(element) === index ? true : false)
-    
+    return validate
+}
+
+
+// const validatePasswords = (passwords) => passwords.map((element,index,array) => element.length >= 5 
+//         && containsUppercaseLetter(element) 
+//         && containsLowercaseLetter(element) 
+//         && containsNumber(element) 
+//         && containsSymbol(element)
+//         && array.indexOf(element) === index ? true : false)
+
+// function validatePasswords(passwords) {
+//     const result = [];
+//     for (let element of passwords) {
+//         if (element.length >= 5
+//             && containsUppercaseLetter(element)
+//             && containsLowercaseLetter(element)
+//             && containsNumber(element)
+//             && containsSymbol(element)
+//         ) {
+//             element = true;
+//             result.push(element)
+//         } else {
+//             element = false;
+//             result.push(element)
+//         }
+//     }
+//     return result;
+// }    
 
 // Returns true if string contains at least one uppercase letter.
 function containsUppercaseLetter(string) {
